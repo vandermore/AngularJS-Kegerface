@@ -2,11 +2,7 @@ kegerface
 =========
 
 A Kegerator Interface!
-This is a work in progress. Be gentle.
-
-
-Questions? Comments? Want to Contribute? email us - kegerface@gmail.com
-
+This project is for a port over to AngularJS running on Node.js for a Raspberry Pi implementation. It's a fork of the original Kegerface implementation meant as both a learning platform, and to give Kegerface more user friendly functionality.
 
 Note for beers.csv
 ------------------------
