@@ -1,10 +1,76 @@
 <html ng-app>
-<head>
-	<script src="angular/1.0.8/angular.min.js"></script>
-	<script src="js/keg_controller.js"><script>
-</head>
-<body ng-controller="KegController">
+	<head>
+                <!-- regular CSS for page -->
+                <link rel="stylesheet" type="text/css" href="style.css">
 
-</body>
+		<script src="angularjs/1.0.8/angular.min.js"></script>
+		<script src="js/keg_controller.js"><script>
+	</head>
+	<body ng-controller="KegListController">
+                <div id="header">
+                        <div id="headerboxa">
+                                <br />
+					TODO:: DATE GOES HERE!!!
+                        </div>
+                        <div id="headerboxa">
+                                <img src="/kegerface/images/blank.png" height="100">
+                        </div>
+                        <div id="headerboxb">
+                                <h1>BEERS ON TAP</h1>
+                        </div>
+                </div>
+                <br />
+                <!-- Background div for column headers -->
+                <div id="TitleBarBack">
+                </div>
+
+                <div id="TitleBarBeerPic">
+                </div>
+
+                <div id="TitleBarBeerName">
+                NAME
+                </div>
+
+                <div id="TitleBarInfo">
+                INFO
+                </div>
+
+                <div id="TitleBarKeg">
+                STATUS
+                </div>
+
+                <!-- Taps -->
+                <div id="content-row1a" ng-repeat="keg in kegs">
+                        <div id="BeerPic">
+                                <img src="/kegerface/images/SRM {{keg.srm_lovibond}}.png" height="150">
+                        </div>
+                        <div id="{{keg.name}}">
+                                <h1>{{keg.name}}</h1>
+                                <h2>
+					{{keg.style}}
+					<br />
+					{{keg.brewery}}
+				</h2>
+                        </div>
+                        <div id="BeerInfo">
+                                {{keg.abv}}
+				<br />
+				<h2>ABV</h2>
+                                <img src="/kegerface/images/{{keg.ibu}} Hops.png" width="200">
+                        </div>
+                        <div id="BeerStatus">
+                                <img src="/kegerface/images/kegs/{{keg.status}}.png" width="80">
+                        </div>
+                </div>
+
+                <div id="footer">
+                         AngularJS Kegerface v0.0.1
+                </div>
+
+                <!-- this overlays a graphic that gives a little more grunge look to everything -->
+                <span></span>
+
+                <!-- overlay divs for links to recipes -->
+                <a ng-repeat="keg in kegs" target="_blank" href="{{}}"><div id="links1"></div></a>
+        </body>
 </html>
-
