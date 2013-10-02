@@ -1,5 +1,6 @@
 body {
-  background-image: url('images/background.jpg');
+	background-image: url('images/background.jpg');
+	color: white;
 }
 
 .header {
@@ -19,51 +20,41 @@ body {
 	padding-left: 30px;
 	float: left;
 	font: 1.3em Georgia;
-	color: white;
 	font-weight: bold;
 	text-align: center;
 }
 
 .titleBarBeerPic {
 	width: 140px;
-	height: 30px;
 	display: inline-block;
 }
 
 .titleBarBeerName {
-	height: 25px;
 	width: 580px;
 	padding-left: 10px;
-	padding-top: 5px;
 	border-left: 1px white dashed;
 	display: inline-block;
 	font: 1em arial, verdana, sans-serif;
-	color: white;
 	text-align: center;
 	font-weight: bold;
 	font-style:italic;
 }
 
 .titleBarInfo {
-	height: 25px;
 	width: 140px;
-	padding-top: 5px;
 	border-left: 1px white dashed;
 	border-right: 1px white dashed;
 	display: inline-block;
 	font: 1em arial, verdana, sans-serif;
-	color: white;
 	text-align: center;
 	font-weight: bold;
 	font-style:italic;
 }
+
 .titleBarKeg {
-	height: 25px;
 	width: 135px;
-	padding-top: 5px;
 	display: inline-block;
 	font: 1em arial, verdana, sans-serif;
-	color: white;
 	text-align: center;
 	font-weight: bold;
 	font-style:italic;
@@ -71,50 +62,32 @@ body {
 
 .beerPic {
 	display: inline-block;
-	padding-left: 20px;
-	padding-right: 20px;
-	margin-top: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: -20px;
+	width:140px;
 }
 
 .beerName {
 	display: inline-block;
-	height: 180px;
 	padding-left: 10px;
 	border-left: 1px white dashed;
-}
-
-#BeerNameL {
-        height: 180px;
-        width: 580px;
-        padding-left: 10px;
-        border-left: 1px white dashed;
-        float:left;
+	width: 580px;
 }
 
 .keg_name {
-	display: inline-block;
-	color: white;
 	font: 1.5em Georgia;
 	font-weight: bold;
 	word-wrap: break-word;
-	-webkit-margin-before: 10px;
-	-webkit-margin-after: 1.82em;
 }
 
 .keg_style {
-	display: inline-block;
 	font: 1em Georgia;
 	color: #888888;
 }
 
 .beerInfo {
 	display: inline-block;
-	height:170px;
 	width: 140px;
-	padding-top:10px;
 	border-left: 1px white dashed;
 	border-right: 1px white dashed;
 	text-align: center;
@@ -126,7 +99,6 @@ body {
 	display: inline-block;
 	height: 160px;
 	width: 100px;
-	float:left;
 	padding-left: 30px;
 	padding-top: 20px;
 	opacity: .8;
@@ -147,17 +119,14 @@ body {
 	height: 180px;
 	z-index: 5;
 	position: absolute;
-    display: block;
-    top: 157;
-    left: 0;
+	display: block;
+	top: 157;
+	left: 0;
 }
 
 .titleBar {
-	display: block;
 	height: 30px;
 	position: relative;
 	opacity: .4;
 	background: grey;
-	text-align: center;
-	vertical-align: middle;
 }
