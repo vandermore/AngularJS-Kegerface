@@ -1,65 +1,64 @@
-<html ng-app>
+<!doctype html>
+<html lang="en-us" ng-app>
 	<head>
                 <!-- regular CSS for page -->
                 <link rel="stylesheet" type="text/css" href="style.css">
 
 		<script src="angularjs/1.0.8/angular.min.js"></script>
-		<script src="js/keg_controller.js"><script>
+		<script src="js/keg_controller.js"></script>
 	</head>
 	<body ng-controller="KegListController">
-                <div id="header">
-                        <div id="headerboxa">
+                <div class="header">
+                        <div class="headerboxa">
                                 <br />
 					TODO:: DATE GOES HERE!!!
                         </div>
-                        <div id="headerboxa">
-                                <img src="/kegerface/images/blank.png" height="100">
+                        <div class="headerboxa">
+                                <img src="images/blank.png" height="100">
                         </div>
-                        <div id="headerboxb">
+                        <div class="headerboxb">
                                 <h1>BEERS ON TAP</h1>
                         </div>
                 </div>
                 <br />
-                <!-- Background div for column headers -->
-                <div id="TitleBarBack">
-                </div>
+		<div class="titleBar">
+	                <div class="titleBarBeerPic">
+        	        </div>
 
-                <div id="TitleBarBeerPic">
-                </div>
+                	<div class="titleBarBeerName">
+                	NAME
+                	</div>
 
-                <div id="TitleBarBeerName">
-                NAME
-                </div>
+	                <div class="titleBarInfo">
+	                INFO
+			</div>
 
-                <div id="TitleBarInfo">
-                INFO
-                </div>
-
-                <div id="TitleBarKeg">
-                STATUS
-                </div>
+	                <div class="titleBarKeg">
+	                STATUS
+	                </div>
+		</div>
 
                 <!-- Taps -->
-                <div id="content-row1a" ng-repeat="keg in kegs">
-                        <div id="BeerPic">
-                                <img src="/kegerface/images/SRM {{keg.srm_lovibond}}.png" height="150">
+                <div ng-repeat="keg in kegs" class="content-row">
+                        <div class="beerPic">
+                                <img src="images/SRM {{keg.srm_lovibond}}.png" height="150">
                         </div>
-                        <div id="{{keg.name}}">
-                                <h1>{{keg.name}}</h1>
-                                <h2>
+                        <div class="beerName">
+                                <div class="keg_name">{{keg.name}}</div>
+                                <div class="keg_style">
 					{{keg.style}}
 					<br />
 					{{keg.brewery}}
-				</h2>
+				</div>
                         </div>
-                        <div id="BeerInfo">
+                        <div class="beerInfo">
                                 {{keg.abv}}
 				<br />
-				<h2>ABV</h2>
-                                <img src="/kegerface/images/{{keg.ibu}} Hops.png" width="200">
+				<div>ABV</div>
+                                <img src="images/{{keg.ibu}} Hops.png" width="200">
                         </div>
-                        <div id="BeerStatus">
-                                <img src="/kegerface/images/kegs/{{keg.status}}.png" width="80">
+                        <div class="beerStatus">
+                                <img src="images/kegs/{{keg.status}}.png" width="80">
                         </div>
                 </div>
 
@@ -67,10 +66,7 @@
                          AngularJS Kegerface v0.0.1
                 </div>
 
-                <!-- this overlays a graphic that gives a little more grunge look to everything -->
-                <span></span>
-
                 <!-- overlay divs for links to recipes -->
-                <a ng-repeat="keg in kegs" target="_blank" href="{{}}"><div id="links1"></div></a>
+                <a ng-repeat="keg in kegs" target="_blank" href="{{keg.url}}"><div id="links1"></div></a>
         </body>
 </html>
