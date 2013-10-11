@@ -8,75 +8,79 @@
 		<script src="js/keg_controller.js"></script>
 	</head>
 	<body ng-controller="KegListController">
-                <div class="header">
-                          <div class="span2">
-                            <!--Sidebar content-->
-                    
-                            Search: <input ng-model="query">
-                            Sort by:
-                            <select ng-model="orderProp">
-                              <option value="name">Alphabetical</option>
-                              <option value="style">Style</option>
-                              <option value="status">Status</option>
-                            </select>
-                    
-                          </div>
-                        <div class="headerboxa">
-				TODO:: DATE GOES HERE!!!
-                        </div>
-                        <div class="headerboxa">
-                                <img src="images/blank.png" height="100">
-                        </div>
-                        <div class="headerboxb">
-                                <h1>BEERS ON TAP</h1>
-                        </div>
-                </div>
+        <div class="header">
+            <div class="span2">
+                <!--Sidebar content-->
+                
+                Search: <input ng-model="query">
+                Sort by:
+                <select ng-model="orderProp">
+                <option value="name">Alphabetical</option>
+                <option value="style">Style</option>
+                <option value="status">Status</option>
+                </select>
+            </div>
+            
+            <div class="headerboxa">
+                TODO:: DATE GOES HERE!!!
+            </div>
+            
+            <div class="headerboxa">
+                <img src="images/blank.png" height="100">
+            </div>
+            
+            <div class="headerboxb">
+                <h1>BEERS ON TAP</h1>
+            </div>
+        
+        </div>
 		<div class="titleBar">
-	                <div class="titleBarBeerPic">
-        	        </div>
-
-                	<div class="titleBarBeerName">
-                	NAME
-                	</div>
-
-	                <div class="titleBarInfo">
-	                INFO
-			</div>
-
-	                <div class="titleBarKeg">
-	                STATUS
-	                </div>
+            <div class="titleBarBeerPic">
+            </div>
+    
+            <div class="titleBarBeerName">
+                NAME
+            </div>
+    
+            <div class="titleBarInfo">
+                INFO
+            </div>
+    
+            <div class="titleBarKeg">
+                STATUS
+            </div>
 		</div>
 
-                <!-- Taps -->
-                <div ng-repeat="keg in kegs | filter:query | orderBy:orderProp" class="content-row">
-                        <div class="beerPic">
-                                <img src="images/SRM {{keg.srm_lovibond}}.png" height="150">
-                        </div>
-                        <div class="beerName">
-                                <div class="keg_name">{{keg.name}}</div>
-                                <div class="keg_style">
-					{{keg.style}}
-					<br />
-					{{keg.brewery}}
-				</div>
-                        </div>
-                        <div class="beerInfo">
-                                {{keg.abv}}
-				<br />
-				<div>ABV</div>
-                                <img src="images/{{keg.ibu}} Hops.png" width="200">
-                        </div>
-                        <div class="beerStatus">
-                                <img src="images/kegs/{{keg.status}}.png" width="80">
-                        </div>
+        <!-- Taps -->
+        <div ng-repeat="keg in kegs | filter:query | orderBy:orderProp" class="content-row">
+            <div class="beerPic">
+                <img src="images/SRM {{keg.srm_lovibond}}.png" height="150">
+            </div>
+            <div class="beerName">
+                <div class="keg_name">{{keg.name}}</div>
+                <div class="keg_style">
+                    {{keg.style}}
+                    <br />
+                    {{keg.brewery}}
                 </div>
+            </div>
+            <div class="beerInfo">
+                {{keg.abv}}
+                <br />
+                <div>ABV</div>
+                <img src="images/{{keg.ibu}} Hops.png" width="200">
+            </div>
+            <div class="beerStatus">
+                <img src="images/kegs/{{keg.status}}.png" width="80">
+            </div>
+        </div>
 
-                <div id="footer">
-                         AngularJS Kegerface v0.0.1
-                </div>
+        <div id="footer">
+                 AngularJS Kegerface v0.0.1
+        </div>
 
-                <!-- overlay divs for links to recipes -->
-                <a ng-repeat="keg in kegs" target="_blank" href="{{keg.url}}"><div id="links1"></div></a>
-        </body>
+        <!-- overlay divs for links to recipes -->
+        <a ng-repeat="keg in kegs" target="_blank" href="{{keg.url}}"><div id="links1"></div></a>
+        <p>{{kegs | json}}</p>
+    </body>
 </html>

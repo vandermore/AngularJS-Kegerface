@@ -13,10 +13,24 @@ describe('Kegerface controllers', function() {
         beforeEach( inject( function( _$httpBackend_, $rootScope, $controller ) {
             $httpBackend = _$httpBackend_;
             $httpBackend.expectGET( 'kegs/kegs.json' ).
-                respond( [{},{}] );
-            
+                respond( [{name: 'Beer Name'}, {name: 'Beer Name 2'}] );
+
             scope = $rootScope.$new();
             ctrl = $controller( 'KegListController', {$scope: scope} );
         }));
-	});
+
+        it('should create "kegs" model with 2 beers fetched from xhr', function() {
+          expect(scope.kegs).toBeUndefined();
+          $httpBackend.flush();
+    
+          expect(scope.kegs).toEqual([{name: 'Beer Name'},
+                                       {name: 'Beer Name 2'}]);
+        });
+    
+    
+        it('should set the default value of orderProp model', function() {
+          expect(scope.orderProp).toBe('name');
+        });
+
+    });
 });
