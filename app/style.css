@@ -117,5 +117,5 @@
 	background: grey;
 }
 
-<!-- Angular UI Bootstrap CSS, do not remove unless removing Angular UI -->
+/*Angular UI Bootstrap CSS, do not remove unless removing Angular UI */
 .nav, .pagination, .carousel a { cursor: pointer; }
