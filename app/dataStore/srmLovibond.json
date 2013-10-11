@@ -1,0 +1,15 @@
+[
+    { "srmLovibond" : 2, "example" : "Pale lager, Witbier, Pilsener, Berliner Weisse", "beerColor" : "#F8F753", "ebc" : 4 },
+    { "srmLovibond" : 3, "example" : "Maibock, Blonde Ale", "beerColor" : "#F6F513", "ebc" : 6 },
+    {  "srmLovibond" : 4, "example" : "Weissbier", "beerColor" : "#ECE61A", "ebc" : 8 },
+    {  "srmLovibond" : 6, "example" : "American Pale Ale, India Pale Ale", "beerColor" : "#D5BC26", "ebc" :12 },
+    {  "srmLovibond" : 8, "example" : "Weissbier, Saison", "beerColor" : "#BF923B", "ebc" :16 },
+    {  "srmLovibond" : 10, "example" : "English Bitter, ESB", "beerColor" : "#BF813A", "ebc" :20 },
+    {  "srmLovibond" : 13, "example" : "Biere de Garde, Double IPA", "beerColor" : "#BC6733", "ebc" : 26 },
+    {  "srmLovibond" : 17, "example" : "Dark lager, Vienna lager, Marzen, Amber Ale", "beerColor" : "#8D4C32", "ebc" : 33 },
+    {  "srmLovibond" : 20, "example" : "Brown Ale, Bock, Dunkel, Dunkelweizen", "beerColor" : "#5D341A", "ebc" : 39 },
+    {  "srmLovibond" : 24, "example" : "Irish Dry Stout, Doppelbock, Porter", "beerColor" : "#261716", "ebc" : 47 },
+    {  "srmLovibond" : 29, "example" : "Stout", "beerColor" : "#0F0B0A", "ebc" : 57 },
+    {  "srmLovibond" : 35, "example" : "Foreign Stout, Baltic Porter", "beerColor" : "#080707", "ebc" : 69 },
+    {  "srmLovibond" : 40, "example" : "Imperial Stout", "beerColor" : "#030403", "ebc" : 79 }
+]

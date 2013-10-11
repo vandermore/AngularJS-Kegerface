@@ -12,7 +12,7 @@ describe('Kegerface controllers', function() {
         
         beforeEach( inject( function( _$httpBackend_, $rootScope, $controller ) {
             $httpBackend = _$httpBackend_;
-            $httpBackend.expectGET( 'kegs/kegs.json' ).
+            $httpBackend.expectGET( 'dataStore/kegs.json' ).
                 respond( [{name: 'Beer Name'}, {name: 'Beer Name 2'}] );
 
             scope = $rootScope.$new();

@@ -1,17 +1,33 @@
 <!doctype html>
 <html lang="en-us" ng-app>
 	<head>
-                <!-- regular CSS for page -->
-                <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- regular CSS for page -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+        <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap-theme.css">
+        
+        <!-- FontAwesome -->
+        <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
 		<script src="angularjs/1.0.8/angular.min.js"></script>
+        <script src="angularBootstrap/ui-bootstrap-0.6.0.min.js"></script>
 		<script src="js/keg_controller.js"></script>
 	</head>
 	<body ng-controller="KegListController">
         <div class="header">
             <div class="span2">
                 <!--Sidebar content-->
-                
+                <a class="icon-beer"></a>
+                <a class="icon-thumbs-up"></a>
+                <a class="icon-thumbs-down"></a>
+                <a class="icon-sort-by-alphabet"></a>
+                <a class="icon-sort-by-alphabet-alt"></a>
+                <a class="icon-sort-by-attributes"></a>
+                <a class="icon-sort-by-attributes-alt"></a>
+                <a class="icon-sort-by-order"></a>
+                <a class="icon-sort-by-order-alt"></a>
+
                 Search: <input ng-model="query">
                 Sort by:
                 <select ng-model="orderProp">
@@ -26,11 +42,12 @@
             </div>
             
             <div class="headerboxa">
-                <img src="images/blank.png" height="100">
+                <div class="beerPic icon-beer">
+                </div>
             </div>
             
             <div class="headerboxb">
-                <h1>BEERS ON TAP</h1>
+                <h1 class="icon-beer"> BEERS ON TAP</h1>
             </div>
         
         </div>
@@ -53,8 +70,8 @@
 
         <!-- Taps -->
         <div ng-repeat="keg in kegs | filter:query | orderBy:orderProp" class="content-row">
-            <div class="beerPic">
-                <img src="images/SRM {{keg.srm_lovibond}}.png" height="150">
+            <div class="beerPic icon-beer" style="color: {{keg.srm_lovibond}}">
+<!--                <img ng-src="images/SRM {{keg.srm_lovibond}}.png" height="150">-->
             </div>
             <div class="beerName">
                 <div class="keg_name">{{keg.name}}</div>
@@ -68,10 +85,10 @@
                 {{keg.abv}}
                 <br />
                 <div>ABV</div>
-                <img src="images/{{keg.ibu}} Hops.png" width="200">
+                <img ng-src="images/{{keg.ibu}} Hops.png" width="200">
             </div>
             <div class="beerStatus">
-                <img src="images/kegs/{{keg.status}}.png" width="80">
+                <img ng-src="images/kegs/{{keg.status}}.png" width="80">
             </div>
         </div>
 
