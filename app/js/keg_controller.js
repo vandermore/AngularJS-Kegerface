@@ -2,52 +2,10 @@
 
 /* Controllers */
 
-function KegListController($scope) {
-	$scope.kegs = [
-		{ "name": "Beer Name",
-		  "longName": "Long Beer NAME",
-		  "style": "A Beer Style",
-		  "brewery": "Moorehouse Brewery",
-		  "url": "http://vandermore.com",
-		  "abv": "0",
-		  "ibu": "0",
-		  "srm_lovibond": "5",
-		  "status": "0" },
-		{ "name": "Beer Name 2",
-		  "longName": "Long Beer NAME",
-		  "style": "A Beer Style",
-		  "brewery": "Moorehouse Brewery",
-                  "url": "http://vandermore.com",
-		  "abv": "0",
-		  "ibu": "0",
-		  "srm_lovibond": "5",
-		  "status": "0" },
-		{ "name": "Beer Name 3",
-		  "longName": "Long Beer NAME",
-		  "style": "A Beer Style",
-		  "brewery": "Moorehouse Brewery",
-                  "url": "http://vandermore.com",
-		  "abv": "0",
-		  "ibu": "0",
-		  "srm_lovibond": "5",
-		  "status": "0" },
-		{ "name": "Beer Name 4",
-		  "longName": "Long Beer NAME",
-		  "style": "A Beer Style",
-		  "brewery": "Moorehouse Brewery",
-                  "url": "http://vandermore.com",
-		  "abv": "0",
-		  "ibu": "0",
-		  "srm_lovibond": "5",
-		  "status": "0" },
-		{ "name": "Beer Name 5",
-		  "longName": "Long Beer NAME",
-		  "style": "A Beer Style",
-		  "brewery": "Moorehouse Brewery",
-                  "url": "http://vandermore.com",
-		  "abv": "0",
-		  "ibu": "0",
-		  "srm_lovibond": "5",
-		  "status": "0" }
-	];
+function KegListController($scope, $http) {
+    $http.get('kegs/kegs.json').success( function ( data ) {
+        $scope.kegs = data;
+    });
+    
+    $scope.orderProp = 'name';
 }

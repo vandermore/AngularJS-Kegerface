@@ -9,6 +9,18 @@
 	</head>
 	<body ng-controller="KegListController">
                 <div class="header">
+                          <div class="span2">
+                            <!--Sidebar content-->
+                    
+                            Search: <input ng-model="query">
+                            Sort by:
+                            <select ng-model="orderProp">
+                              <option value="name">Alphabetical</option>
+                              <option value="style">Style</option>
+                              <option value="status">Status</option>
+                            </select>
+                    
+                          </div>
                         <div class="headerboxa">
 				TODO:: DATE GOES HERE!!!
                         </div>
@@ -37,7 +49,7 @@
 		</div>
 
                 <!-- Taps -->
-                <div ng-repeat="keg in kegs" class="content-row">
+                <div ng-repeat="keg in kegs | filter:query | orderBy:orderProp" class="content-row">
                         <div class="beerPic">
                                 <img src="images/SRM {{keg.srm_lovibond}}.png" height="150">
                         </div>
