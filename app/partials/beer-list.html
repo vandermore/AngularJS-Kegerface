@@ -14,9 +14,9 @@
                 Search: <input ng-model="query">
                 Sort by:
                 <select ng-model="orderProp">
-                <option value="name">Alphabetical</option>
-                <option value="style">Style</option>
-                <option value="status">Status</option>
+                    <option value="name">Alphabetical</option>
+                    <option value="style">Style</option>
+                    <option value="status">Status</option>
                 </select>
             </div>
             
@@ -53,7 +53,7 @@
 
         <!-- Taps -->
         <div ng-repeat="keg in kegs | filter:query | orderBy:orderProp" class="content-row">
-            <div class="beerPic icon-beer" style="color: {{keg.getLovibondColor( keg.srm_lovibond )}}">
+            <div class="beerPic icon-beer" style="color: {{ keg.srm_lovibond | lovibondColor }}">
 <!--                <img ng-src="images/SRM {{keg.srm_lovibond}}.png" height="150">-->
             </div>
             <div class="beerName">
