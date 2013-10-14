@@ -9,13 +9,66 @@
         <!-- FontAwesome -->
         <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
-		<script src="angularjs/1.0.8/angular.min.js"></script>
-        <script src="angularBootstrap/ui-bootstrap-0.6.0.min.js"></script>
+		<script src="angularjs/1.0.8/angular.js"></script>
+        <script src="angularBootstrap/ui-bootstrap-0.6.0.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/keg_controller.js"></script>
 		<script src="js/filters.js"></script>
+        <script src="js/services.js"></script>
+        <script src="lib/angular/angular-resource.js"></script>
 	</head>
 	<body>
-        <div ng-view></div>
+        <header>
+            <div class="header">
+                <div class="headerboxa">
+                    <a class="icon-beer"></a>
+                    <a class="icon-thumbs-up"></a>
+                    <a class="icon-thumbs-down"></a>
+                    <a class="icon-sort-by-alphabet"></a>
+                    <a class="icon-sort-by-alphabet-alt"></a>
+                    <a class="icon-sort-by-attributes"></a>
+                    <a class="icon-sort-by-attributes-alt"></a>
+                    <a class="icon-sort-by-order"></a>
+                    <a class="icon-sort-by-order-alt"></a>
+    
+                    Search: <input ng-model="query">
+                    Sort by:
+                    <select ng-model="orderProp">
+                        <option value="name">Alphabetical</option>
+                        <option value="style">Style</option>
+                        <option value="status">Status</option>
+                    </select>
+                    TODO:: DATE GOES HERE!!!
+                </div>
+                
+                <div class="headerboxa">
+                    <h1 class="icon-beer"> BEERS ON TAP</h1>
+                </div>
+            
+            </div>
+            <div class="titleBar">
+                <div class="titleBarBeerPic">
+                </div>
+        
+                <div class="titleBarBeerName">
+                    NAME
+                </div>
+        
+                <div class="titleBarInfo">
+                    INFO
+                </div>
+        
+                <div class="titleBarKeg">
+                    STATUS
+                </div>
+            </div>
+        </header>
+        
+        <div class="content" ng-view></div>
+        
+        <footer>
+            <div id="footer">AngularJS Kegerface v0.0.2</div>
+            <p>{{kegs | json}}</p>
+        </footer>
     </body>
 </html>

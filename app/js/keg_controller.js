@@ -1,13 +1,13 @@
 /* Controllers */
 
-function KegListController($scope, $http) {
+function KegListController($scope, Kegerator) {
    "use strict";
+    
+    $scope.kegs = Kegerator.query();
+    $scope.orderProp = 'name';
+}
 
-    $http.get('dataStore/kegs.json').success( function ( data ) {
-        $scope.kegs = data;
-        $scope.orderProp = 'name';
-    });
-
+function LovibondController( $scope, $http ) {
     $http.get('dataStore/srmLovibond.json').success( function ( data ) {
         $scope.srmLovibondRanges = data;
     });
