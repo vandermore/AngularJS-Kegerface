@@ -2,9 +2,9 @@
 <html lang="en-us" ng-app="kegerfaceApp">
 	<head>
         <!-- regular CSS for page -->
-        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap-theme.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         
         <!-- FontAwesome -->
         <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -21,6 +21,7 @@
         <header>
             <div class="header">
                 <div class="headerboxa">
+                    <h1 class="icon-beer"> BEERS ON TAP</h1>
                     <a class="icon-beer"></a>
                     <a class="icon-thumbs-up"></a>
                     <a class="icon-thumbs-down"></a>
@@ -40,34 +41,19 @@
                     </select>
                     TODO:: DATE GOES HERE!!!
                 </div>
-                
-                <div class="headerboxa">
-                    <h1 class="icon-beer"> BEERS ON TAP</h1>
-                </div>
-            
             </div>
             <div class="titleBar">
-                <div class="titleBarBeerPic">
-                </div>
-        
-                <div class="titleBarBeerName">
-                    NAME
-                </div>
-        
-                <div class="titleBarInfo">
-                    INFO
-                </div>
-        
-                <div class="titleBarKeg">
-                    STATUS
-                </div>
+                <div class="column1">COLOR</div>
+                <div class="column2">NAME</div>
+                <div class="column3">INFO</div>
+                <div class="column4">STATUS</div>
             </div>
         </header>
         
         <div class="content" ng-view></div>
         
         <footer>
-            <div id="footer">AngularJS Kegerface v0.0.2</div>
+            <div id="attribution">AngularJS Kegerface v0.0.2</div>
             <p>{{kegs | json}}</p>
         </footer>
     </body>

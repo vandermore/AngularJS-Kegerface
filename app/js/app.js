@@ -2,7 +2,7 @@
 
 /* App Module */
 
-angular.module('kegerfaceApp', ['kegerfaceFilters', 'kegerfaceServices']).
+var kegerfaceApp = angular.module('kegerfaceApp', ['kegerfaceController', 'lovibondController', 'kegerfaceFilters', 'kegerfaceServices']).
   config(['$routeProvider', function($routeProvider) {
       /* Super simple route provider */
       $routeProvider.

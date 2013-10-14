@@ -2,22 +2,25 @@
 
 html, body {
     height:100%;
+	background:#000000;
 }
 
 header{
-    width: 100%;
+	color: #545f40;
     background: #bfd39b;
+    width: 100%;
     position: fixed; 
     top: 0;
-    height: 60px !important;
-    opacity:.8;
+	z-index:10;
 }
 
 .content {
+	color: #545f40;
+	font-size: 1.2em;
     position:relative;
     height: 100%;
-    padding:60px 0 30px 0; /* Header height and footer height */
-    margin:0 auto 0 auto; /* Center content */
+	top: 90px; /* Header height */
+    margin:0 auto 30px auto; /* Center content */
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     -o-box-sizing:border-box;
@@ -38,115 +41,92 @@ footer {
 .header {
 	display: inline-block;
 	width: 100%;
-	border-bottom: 1px white dashed;
 }
 
 .headerboxa {
 	display: inline-block;
 	width: 100%;
-	padding-left: 30px;
+	height: 60px;
 	float: left;
-	font: 1.3em Georgia;
+	font-size: 1.3em;
 	font-weight: bold;
 	text-align: center;
+	vertical-align:middle;
 }
 
-.titleBarBeerPic {
-	width: 140px;
+.titleBar {
+	height: 25px;
+	position: relative;
+	background: #a3a3a3;
+	border-top: 1px white dashed;
+	font-size: 1em;
+/*	text-align: center;*/
+	font-weight: bold;
+	font-style:italic;
+}
+
+.column1 {
 	display: inline-block;
+	width: 140px;
+	margin-left: 20px;
+	vertical-align: top;
 }
 
-.titleBarBeerName {
+.column2 {
+	display: inline-block;
 	width: 580px;
 	padding-left: 10px;
 	border-left: 1px white dashed;
-	display: inline-block;
-	font: 1em arial, verdana, sans-serif;
-	text-align: center;
-	font-weight: bold;
-	font-style:italic;
-}
-
-.titleBarInfo {
-	width: 140px;
-	border-left: 1px white dashed;
 	border-right: 1px white dashed;
-	display: inline-block;
-	font: 1em arial, verdana, sans-serif;
-	text-align: center;
-	font-weight: bold;
-	font-style:italic;
+	vertical-align: top;
 }
 
-.titleBarKeg {
-	width: 135px;
+.column3 {
 	display: inline-block;
-	font: 1em arial, verdana, sans-serif;
-	text-align: center;
-	font-weight: bold;
-	font-style:italic;
+	width: 140px;
+	border-right: 1px white dashed;
+	vertical-align: top;
+}
+
+.column4 {
+	display: inline-block;
+	width: 135px;
+	vertical-align: top;
 }
 
 .beerPic {
-	display: inline-block;
-	margin-left: 20px;
-	margin-right: -20px;
-	width:140px;
     font-size: 128px;
+	height: 155px;
 }
 
 .beerName {
-	display: inline-block;
-	padding-left: 10px;
-	border-left: 1px white dashed;
-	width: 580px;
+	height: 155px;
+}
+
+.beerInfo {
+	text-align: center;
+	font-size: 1.8em;
+	height: 155px;
+}
+
+.beerStatus {
+	height: 155px;
 }
 
 .keg_name {
-	font: 1.5em Georgia;
+	font-size: 1.5em;
 	font-weight: bold;
 	word-wrap: break-word;
 }
 
 .keg_style {
-	font: 1em Georgia;
-	color: #888888;
+	font-size: 1em;
 }
 
-.beerInfo {
-	display: inline-block;
-	width: 140px;
-	border-left: 1px white dashed;
-	border-right: 1px white dashed;
-	text-align: center;
-	font: 1.8em Georgia;
-	color: #D8D8D8;
-}
-
-.beerStatus {
-	display: inline-block;
-	height: 160px;
-	width: 100px;
-	padding-left: 30px;
-	padding-top: 20px;
-	opacity: .8;
-}
-
-.content-row {
-	font: 1.5em arial, verdana, sans-serif;
-}
-
-#footer {
+#attribution {
 	float: right;
-	color: #aeef33;
+	color: #545f40;
         -webkit-margin-before: 4px;
-}
-
-.titleBar {
-	height: 30px;
-	position: relative;
-	opacity: .4;
-	background: grey;
 }
 
 /*Angular UI Bootstrap CSS, do not remove unless removing Angular UI */
