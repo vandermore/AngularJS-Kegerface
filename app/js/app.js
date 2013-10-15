@@ -1,9 +1,10 @@
 'use strict';
 
 /* App Module */
+/* kegerfaceApp is the app name, and all of the strings in the array are dependencies for the app.*/
+var kegerfaceApp = angular.module('kegerfaceApp', ['kegerfaceController', 'lovibondController', 'kegerfaceFilters', 'kegerfaceServices']);
 
-var kegerfaceApp = angular.module('kegerfaceApp', ['kegerfaceController', 'lovibondController', 'kegerfaceFilters', 'kegerfaceServices']).
-  config(['$routeProvider', function($routeProvider) {
+kegerfaceApp.config(['$routeProvider', function($routeProvider) {
       /* Super simple route provider */
       $routeProvider.
           when('/', {
