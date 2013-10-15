@@ -12,6 +12,8 @@ kegerfaceController.controller( 'KegListController', ['$scope', 'Kegerator',
 lovibondController.controller( 'LovibondListController', ['$scope', 'Lovibond',
 													  function( $scope, Lovibond ) {
 															$scope.srmLovibondRanges = Lovibond.query();
+														  
+														  /* This needs to move out of here. Works for now, but could possibly be converted to a filter.*/
 															$scope.lovibondUIColor = function ( lbColor ) {
 																if ( $scope.srmLovibondRanges != undefined ) {
 																	for ( var i = 0; i < $scope.srmLovibondRanges.length; i++ ) {
