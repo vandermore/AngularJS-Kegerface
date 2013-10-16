@@ -1,9 +1,9 @@
         <!-- Taps -->
         <div ng-repeat="keg in kegs | filter:query | orderBy:orderProp" class="content-row">
-            <div class="column1 beerPic" ng-include="'partials/beer-display.html'" ng-controller="LovibondListController"></div>
-            <div class="column2 beerName">
-                <div class="keg_name">{{keg.name}}</div>
-                <div class="keg_style">{{keg.style}}<br />{{keg.brewery}}</div>
+            <div class="column1 beerPic icon-beer" style="color: {{ lovibondUIColor( keg.srm_lovibond ) }}">&nbsp;</div><!-- the color style needs changing to ng-class or ng-style -->
+			<div class="column2 beerName">
+				<div class="keg_name">{{keg.name}}</div>
+				<div class="keg_style">{{keg.style}}<br />{{keg.brewery}}</div>
             </div>
             <div class="column3 beerInfo">{{keg.abv}} ABV<img ng-src="images/{{keg.ibu}} Hops.png" width="200"></div>
             <div class="column4 beerStatus"><img ng-src="images/kegs/{{keg.status}}.png" width="80"></div>

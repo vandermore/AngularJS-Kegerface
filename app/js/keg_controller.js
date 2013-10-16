@@ -1,22 +1,13 @@
 /* Controllers */
 
 var kegerfaceController = angular.module( 'kegerfaceController', [] );
-var lovibondController = angular.module( 'lovibondController', [] );
 
-kegerfaceController.controller( 'KegListController', ['$scope', 'Kegerator',
-													  function($scope, Kegerator ) {
-														  var kegs, orderProp; //Creating these here to serve as AngularJS models.
+kegerfaceController.controller( 'KegListController', ['$scope', 'Kegerator', 'Lovibond',
+													  function($scope, Kegerator, Lovibond ) {
+														  var kegs, orderProp, srmLovibondRanges, lovibondUIColor; //Creating these here to serve as AngularJS models.
 														  kegs = Kegerator.query();
-														  orderProp = 'name';
-														  
-														  $scope.kegs = kegs;
-														  $scope.orderProp = orderProp;
-													  }]);
-
-lovibondController.controller( 'LovibondListController', ['$scope', 'Lovibond',
-													  function( $scope, Lovibond ) {
-														  var srmLovibondRanges, lovibondUIColor; //Creating these here to serve as AngularJS models.
 														  srmLovibondRanges = Lovibond.query();
+														  orderProp = 'name';
 														  
 														  lovibondUIColor = function ( lbColor ) {
 																if ( $scope.srmLovibondRanges != undefined ) {
@@ -34,7 +25,21 @@ lovibondController.controller( 'LovibondListController', ['$scope', 'Lovibond',
 															};
 														  
 														  $scope.srmLovibondRanges = srmLovibondRanges;
-														  $scope.lovibondUIColor = lovibondUIColor;
-														  
-														  //TODO:: Look into doing a $watch here instead of having the lbColor passed in.
+														  $scope.lovibondUIColor = lovibondUIColor;	//TODO:: Look into doing a $watch here instead of having the lbColor passed in.
+														  $scope.kegs = kegs;
+														  $scope.orderProp = orderProp;
 													  }]);
+
+//kegerfaceController.filter('lovibondColor', function() {
+//	var lovibondColorFilter = function( input, $scope ) {
+////		return "#00FFFF";
+//		for ( lovibondData in srmLovibondRanges ) {
+//			if ( input <= lovibondData.srmLovibond ) {
+//				return lovibondData.beerColor;
+//			}
+//		}
+//		return input;
+//    };
+//	
+//	return lovibondColorFilter;
+//});
