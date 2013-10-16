@@ -9,7 +9,7 @@ kegerfaceApp.config(['$routeProvider', function($routeProvider) {
       /* Super simple route provider */
       $routeProvider.
           when('/', {
-              templateUrl: 'partials/beer-list.html',   controller: 'KegListController'
+              templateUrl: 'partials/beer-list.html'
           }).
           otherwise({
               redirectTo: '/'

@@ -32,7 +32,6 @@ kegerfaceController.controller( 'KegListController', ['$scope', 'Kegerator', 'Lo
 
 //kegerfaceController.filter('lovibondColor', function() {
 //	var lovibondColorFilter = function( input, $scope ) {
-////		return "#00FFFF";
 //		for ( lovibondData in srmLovibondRanges ) {
 //			if ( input <= lovibondData.srmLovibond ) {
 //				return lovibondData.beerColor;
